@@ -2,7 +2,7 @@ const validateSchema = async (schema, data) => {
     try {
         await schema.validateAsync(data);
     } catch (error) {
-        error.httpStatus = 400;
+        error.httpsStatus = 400;
         throw error;
     }
 };

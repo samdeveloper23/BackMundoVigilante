@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "44b60d50-08f9-4053-8681-296a40ab25c6",
 		"name": "tattooArt",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "httpss://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
@@ -23,8 +23,8 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/users",
-							"protocol": "http",
+							"raw": "https://localhost:8000/users",
+							"protocol": "https",
 							"host": [
 								"localhost"
 							],
@@ -54,8 +54,8 @@
 							}
 						},
 						"url": {
-							"raw": "https://gbdccbd.r.af.d.sendibt2.com/tr/cl/rdOYXqLGXW8Tnmi35dMUGzrn-A8ijzCRDQXPsGDnAjSHZizytn9MhFVbPDWS9c8-Te7ea524Rjxjs2s1k54rDPsgMLqTUy3BDSqImQaMMwmQMmIxhuTwrF3iehJh-KyksH59CV42pSr5grOPegMmDI6ppkuyNWW57PU9rap7TTwOHzVircOYlqdN_ShsjfHzMerEMI73SvdKFke2LBV2-WQWUMVX9iB214HDkhmyKqz_9Bd-oDm0jW7uYXVFV_ehESeweq6BrkemI-s8irlRXhBD5_hkUp9V7v8Bs0p6J3W1iw",
-							"protocol": "https",
+							"raw": "httpss://gbdccbd.r.af.d.sendibt2.com/tr/cl/rdOYXqLGXW8Tnmi35dMUGzrn-A8ijzCRDQXPsGDnAjSHZizytn9MhFVbPDWS9c8-Te7ea524Rjxjs2s1k54rDPsgMLqTUy3BDSqImQaMMwmQMmIxhuTwrF3iehJh-KyksH59CV42pSr5grOPegMmDI6ppkuyNWW57PU9rap7TTwOHzVircOYlqdN_ShsjfHzMerEMI73SvdKFke2LBV2-WQWUMVX9iB214HDkhmyKqz_9Bd-oDm0jW7uYXVFV_ehESeweq6BrkemI-s8irlRXhBD5_hkUp9V7v8Bs0p6J3W1iw",
+							"protocol": "httpss",
 							"host": [
 								"gbdccbd",
 								"r",
@@ -88,8 +88,8 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/users/login",
-							"protocol": "http",
+							"raw": "https://localhost:8000/users/login",
+							"protocol": "https",
 							"host": [
 								"localhost"
 							],
@@ -115,8 +115,8 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8000/users/owner",
-							"protocol": "http",
+							"raw": "https://localhost:8000/users/owner",
+							"protocol": "https",
 							"host": [
 								"localhost"
 							],
@@ -142,8 +142,8 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8000/users/1",
-							"protocol": "http",
+							"raw": "https://localhost:8000/users/1",
+							"protocol": "https",
 							"host": [
 								"localhost"
 							],
@@ -162,8 +162,8 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8000/users",
-							"protocol": "http",
+							"raw": "https://localhost:8000/users",
+							"protocol": "https",
 							"host": [
 								"localhost"
 							],
@@ -203,8 +203,8 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/users/info",
-							"protocol": "http",
+							"raw": "https://localhost:8000/users/info",
+							"protocol": "https",
 							"host": [
 								"localhost"
 							],
@@ -238,8 +238,8 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/users/place",
-							"protocol": "http",
+							"raw": "https://localhost:8000/users/place",
+							"protocol": "https",
 							"host": [
 								"localhost"
 							],
@@ -274,8 +274,8 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:8000/users/avatar",
-							"protocol": "http",
+							"raw": "https://localhost:8000/users/avatar",
+							"protocol": "https",
 							"host": [
 								"localhost"
 							],
@@ -303,8 +303,8 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/users/password/recover",
-							"protocol": "http",
+							"raw": "https://localhost:8000/users/password/recover",
+							"protocol": "https",
 							"host": [
 								"localhost"
 							],
@@ -333,8 +333,8 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/users/password/recover",
-							"protocol": "http",
+							"raw": "https://localhost:8000/users/password/recover",
+							"protocol": "https",
 							"host": [
 								"localhost"
 							],
@@ -369,8 +369,8 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/users/password",
-							"protocol": "http",
+							"raw": "https://localhost:8000/users/password",
+							"protocol": "https",
 							"host": [
 								"localhost"
 							],
@@ -395,8 +395,8 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8000/users/1",
-							"protocol": "http",
+							"raw": "https://localhost:8000/users/1",
+							"protocol": "https",
 							"host": [
 								"localhost"
 							],
@@ -457,8 +457,8 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:8000/publications",
-							"protocol": "http",
+							"raw": "https://localhost:8000/publications",
+							"protocol": "https",
 							"host": [
 								"localhost"
 							],
@@ -483,8 +483,8 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8000/publications",
-							"protocol": "http",
+							"raw": "https://localhost:8000/publications",
+							"protocol": "https",
 							"host": [
 								"localhost"
 							],
@@ -516,8 +516,8 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8000/publications/1",
-							"protocol": "http",
+							"raw": "https://localhost:8000/publications/1",
+							"protocol": "https",
 							"host": [
 								"localhost"
 							],
@@ -542,8 +542,8 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8000/publications/:publicationId/likes",
-							"protocol": "http",
+							"raw": "https://localhost:8000/publications/:publicationId/likes",
+							"protocol": "https",
 							"host": [
 								"localhost"
 							],
@@ -575,8 +575,8 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8000/publications/:publicationId/likes",
-							"protocol": "http",
+							"raw": "https://localhost:8000/publications/:publicationId/likes",
+							"protocol": "https",
 							"host": [
 								"localhost"
 							],
@@ -617,8 +617,8 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/publications/1/comments",
-							"protocol": "http",
+							"raw": "https://localhost:8000/publications/1/comments",
+							"protocol": "https",
 							"host": [
 								"localhost"
 							],
@@ -644,8 +644,8 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8000/publications/1/comments/1",
-							"protocol": "http",
+							"raw": "https://localhost:8000/publications/1/comments/1",
+							"protocol": "https",
 							"host": [
 								"localhost"
 							],
@@ -672,8 +672,8 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8000/publications/1",
-							"protocol": "http",
+							"raw": "https://localhost:8000/publications/1",
+							"protocol": "https",
 							"host": [
 								"localhost"
 							],

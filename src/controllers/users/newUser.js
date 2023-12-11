@@ -15,9 +15,9 @@ const newUser = async (req, res, next) => {
 
         await insertUserQuery(email, username, password, role, regCode);
 
-        const activationURL = `http://localhost:8000/users/validate/${regCode}`;
+        const activationURL = `https://eva00.3utilities.com/api/users/validate/${regCode}`;
 
-        const emailSubject = 'Activación de usuario en tattooArt';
+        const emailSubject = 'Activación de usuario en MundoVigilante';
         const emailBody = `
         <!DOCTYPE html>
         <html>
@@ -25,9 +25,9 @@ const newUser = async (req, res, next) => {
           <title>Correo Electrónico de Activación</title>
         </head>
         <body>
-          <p>¡Hola usuario! Bienvenid@ a TattoArt.</p>
+          <p>¡Hola usuario! Bienvenid@ a MundoVigilante.</p>
           <p>Puedes activar tu cuenta haciendo clic en el siguiente enlace:</p>
-          <a id="activationLink" href="http://localhost:8000/users/validate/${regCode}" style="display: inline-block; padding: 10px; background-color: #3498db; color: #fff; text-decoration: none;">Activar cuenta</a>
+          <a id="activationLink" href="https://eva00.3utilities.com/api/users/validate/${regCode}" style="display: inline-block; padding: 10px; background-color: #3498db; color: #fff; text-decoration: none;">Activar cuenta</a>
         
           <script>
             document.getElementById("activationLink").addEventListener("click", async (event) => {
