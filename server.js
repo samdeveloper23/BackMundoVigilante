@@ -20,6 +20,7 @@ app.use(cors({
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   optionsSuccessStatus: 204,
+  allowedHeaders: 'Content-Type,Authorization',
 }));
 
 app.use(express.static(path.join(__dirname, 'public')));
