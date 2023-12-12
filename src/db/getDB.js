@@ -18,7 +18,7 @@ const getDB = async () => {
             await db.query(`USE bfbhminj0t81fyod2xxt`);
 
             pool = mysql.createPool({
-                connectionLimit: 5,
+                connectionLimit: 10,
                 host: 'bfbhminj0t81fyod2xxt-mysql.services.clever-cloud.com',
                 user: 'uozyltbxpvs87x8h',
                 password: 't3XnJ3wu1qRf7XTytpzH',
