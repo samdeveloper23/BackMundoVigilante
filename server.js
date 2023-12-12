@@ -16,7 +16,7 @@ app.use(fileUpload());
 
 // Configuración CORS
 app.use(cors({
-  origin: 'https://subtle-pastelito-519c76.netlify.app',
+  origin: '*',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   optionsSuccessStatus: 204,
