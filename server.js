@@ -34,8 +34,8 @@ app.use(publicationRoutes);
 app.use(errorStandard);
 app.use(notFound);
 
-app.listen(process.env.PORT || 8080, () => {
-  console.log(`Servidor HTTPS escuchando en el puerto ${process.env.PORT || 8080}`.bgMagenta);
+app.listen(process.env.PORT ?? 8080, () => {
+  console.log(`Servidor HTTPS escuchando en el puerto ${process.env.PORT ?? 8080}`);
 });
 
 
