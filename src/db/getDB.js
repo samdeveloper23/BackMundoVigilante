@@ -14,9 +14,8 @@ const getDB = async () => {
                 timezone: 'Z',
             });
 
-            db.query(`CREATE DATABASE IF NOT EXISTS bfbhminj0t81fyod2xxt`);
-
-            db.query(`USE bfbhminj0t81fyod2xxt`);
+            await db.query(`CREATE DATABASE IF NOT EXISTS bfbhminj0t81fyod2xxt`);
+            await db.query(`USE bfbhminj0t81fyod2xxt`);
 
             pool = mysql.createPool({
                 connectionLimit: 5,
@@ -28,9 +27,17 @@ const getDB = async () => {
             });
         }
 
-        return await pool.getConnection();
+        const connection = await pool.getConnection();
+
+        // Código que utiliza la conexión
+
+        // Importante: Cerrar la conexión después de usarla
+        connection.release();
+
+        return connection;
     } catch (error) {
         console.error(error);
+        throw error; // Asegúrate de lanzar el error para que pueda ser manejado externamente
     }
 };
 
