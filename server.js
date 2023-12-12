@@ -1,5 +1,5 @@
 require('dotenv').config();
-const httpss = require('httpss');
+const https = require('https');
 const fs = require('fs');
 const express = require('express');
 const morgan = require('morgan');
@@ -31,9 +31,9 @@ const privateKey = fs.readFileSync('/etc/letsencrypt/live/eva00.3utilities.com/p
 const certificate = fs.readFileSync('/etc/letsencrypt/live/eva00.3utilities.com/fullchain.pem', 'utf8');
 const credentials = { key: privateKey, cert: certificate };
 
-const httpssServer = httpss.createServer(credentials, app);
+const httpsServer = https.createServer(credentials, app);
 
-httpssServer.listen(process.env.httpsS_PORT || 443, () => {
+httpsServer.listen(process.env.httpsS_PORT || 443, () => {
   console.log(`Servidor httpsS escuchando en el puerto ${process.env.httpsS_PORT || 443}`.bgMagenta);
 });
 
@@ -47,7 +47,7 @@ const https = require('https');
 const httpsApp = express();
 
 httpsApp.use((req, res) => {
-  res.redirect(`httpss://${req.headers.host}${req.url}`);
+  res.redirect(`https://${req.headers.host}${req.url}`);
 });
 
 const httpsServer = https.createServer(httpsApp);
