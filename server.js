@@ -43,14 +43,14 @@ app.use(errorStandard);
 app.use(notFound);
 
 // https server (optional, to redirect https to httpsS)
-const https = require('https');
+const http = require('http');
 const httpsApp = express();
 
 httpsApp.use((req, res) => {
   res.redirect(`https://${req.headers.host}${req.url}`);
 });
 
-const httpsServer = https.createServer(httpsApp);
+const httpServer = http.createServer(httpsApp);
 
 httpsServer.listen(process.env.https_PORT || 80, () => {
   console.log(`Servidor https redirigiendo a httpsS en el puerto ${process.env.https_PORT || 80}`.bgMagenta);
