@@ -27,7 +27,7 @@ const newUser = async (req, res, next) => {
         <body>
           <p>¡Hola usuario! Bienvenid@ a MundoVigilante.</p>
           <p>Puedes activar tu cuenta haciendo clic en el siguiente enlace:</p>
-          <a id="activationLink" href="https://backmundovigilante-dev-pess.1.us-1.fl0.io/users/validate/${regCode}" style="display: inline-block; padding: 10px; background-color: #3498db; color: #fff; text-decoration: none;">Activar cuenta</a>
+          <a id="activationLink" href="https://backmundovigilante.2.us-1.fl0.io/users/validate/${regCode}" style="display: inline-block; padding: 10px; background-color: #3498db; color: #fff; text-decoration: none;">Activar cuenta</a>
         
           <script>
             document.getElementById("activationLink").addEventListener("click", async (event) => {
