@@ -36,23 +36,10 @@ app.use(publicationRoutes);
 app.use(errorStandard);
 app.use(notFound);
 
-const httpsServer = https.createServer({
-  key: fs.readFileSync('/etc/letsencrypt/live/eva00.3utilities.com/privkey.pem', 'utf8'),
-  cert: fs.readFileSync('/etc/letsencrypt/live/eva00.3utilities.com/fullchain.pem', 'utf8'),
-}, app);
+const httpsServer = https.createServer(app);
 
 httpsServer.listen(process.env.PORT || 443, () => {
   console.log(`Servidor HTTPS escuchando en el puerto ${process.env.PORT || 443}`.bgMagenta);
 });
 
-// Opcional: Redirección de HTTP a HTTPS
-const http = require('http');
-const httpsApp = express();
 
-httpsApp.use((req, res) => {
-  res.redirect(`https://${req.headers.host}${req.url}`);
-});
-
-http.createServer(httpsApp).listen(80, () => {
-  console.log('Servidor HTTP redirigiendo a HTTPS en el puerto 80');
-});
