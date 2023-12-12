@@ -1,6 +1,4 @@
 require('dotenv').config();
-const https = require('https');
-const fs = require('fs');
 const express = require('express');
 const morgan = require('morgan');
 const fileUpload = require('express-fileupload');
@@ -36,9 +34,7 @@ app.use(publicationRoutes);
 app.use(errorStandard);
 app.use(notFound);
 
-const httpsServer = https.createServer(app);
-
-httpsServer.listen(process.env.PORT || 8080, () => {
+app.listen(process.env.PORT || 8080, () => {
   console.log(`Servidor HTTPS escuchando en el puerto ${process.env.PORT || 8080}`.bgMagenta);
 });
 
