@@ -33,7 +33,7 @@ app.use(publicationRoutes);
 
 const httpsServer = https.createServer(app);
 
-httpsServer.listen(process.env.httpsS_PORT || 443, () => {
+httpsServer.listen(process.env.PORT || 443, () => {
   console.log(`Servidor httpsS escuchando en el puerto ${process.env.httpsS_PORT || 443}`.bgMagenta);
 });
 
@@ -52,6 +52,6 @@ httpsApp.use((req, res) => {
 
 const httpServer = http.createServer(httpsApp);
 
-httpsServer.listen(process.env.https_PORT || 80, () => {
+httpsServer.listen(process.env.PORT || 80, () => {
   console.log(`Servidor https redirigiendo a httpsS en el puerto ${process.env.https_PORT || 80}`.bgMagenta);
 });
