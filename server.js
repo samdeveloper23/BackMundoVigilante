@@ -16,7 +16,7 @@ app.use(fileUpload());
 
 // Configuración CORS
 app.use(cors({
-  origin: 'https://iridescent-cajeta-0752ba.netlify.app',
+  origin: 'https://glistening-griffin-72e17e.netlify.app',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   optionsSuccessStatus: 204,
