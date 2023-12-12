@@ -16,8 +16,7 @@ app.use(fileUpload());
 
 // Configuración CORS
 app.use(cors({
-  origin: 'https://golden-palmier-bb8336.netlify.app', // modificado
-
+  origin: 'https://gleaming-bombolone-1b83aa.netlify.app/', // modificado
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   optionsSuccessStatus: 204,
