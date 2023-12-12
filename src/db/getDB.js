@@ -34,7 +34,7 @@ const getDB = async () => {
         // Importante: Cerrar la conexión después de usarla
         connection.release();
 
-        return await pool.getConnection();
+        return connection; // Devolver la conexión, no es necesario obtener otra conexión aquí
     } catch (error) {
         console.error(error);
         throw error; // Asegúrate de lanzar el error para que pueda ser manejado externamente

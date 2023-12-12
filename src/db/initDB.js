@@ -78,7 +78,7 @@ const main = async () => {
     } catch (error) {
         console.error(error);
     } finally {
-        if (connection) connection.release();
+        if (connection) connection.release(); // Liberar la conexión si se obtuvo con éxito
 
         process.exit();
     }
