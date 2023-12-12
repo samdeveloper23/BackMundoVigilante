@@ -15,14 +15,14 @@ const newUser = async (req, res, next) => {
 
         await insertUserQuery(email, username, password, role, regCode);
 
-        const activationURL = `https://eva00.3utilities.com/api/users/validate/${regCode}`;
+        const activationURL = `https://backmundovigilante-dev-pess.1.us-1.fl0.io/users/validate/${regCode}`;
 
         const emailSubject = 'Activación de usuario en MundoVigilante';
         const emailBody = `
         <!DOCTYPE html>
         <html>
         <head>
-          <title>Correo Electrónico de Activación</title>
+          <title>Activación cuenta MundoVigilante</title>
         </head>
         <body>
           <p>¡Hola usuario! Bienvenid@ a MundoVigilante.</p>
