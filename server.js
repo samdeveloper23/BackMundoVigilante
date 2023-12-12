@@ -27,11 +27,11 @@ app.use(publicationRoutes);
 
 //******************//
 
-const privateKey = fs.readFileSync('/etc/letsencrypt/live/eva00.3utilities.com/privkey.pem', 'utf8');
-const certificate = fs.readFileSync('/etc/letsencrypt/live/eva00.3utilities.com/fullchain.pem', 'utf8');
-const credentials = { key: privateKey, cert: certificate };
+// const privateKey = fs.readFileSync('/etc/letsencrypt/live/eva00.3utilities.com/privkey.pem', 'utf8');
+// const certificate = fs.readFileSync('/etc/letsencrypt/live/eva00.3utilities.com/fullchain.pem', 'utf8');
+// const credentials = { key: privateKey, cert: certificate };
 
-const httpsServer = https.createServer(credentials, app);
+const httpsServer = https.createServer(app);
 
 httpsServer.listen(process.env.httpsS_PORT || 443, () => {
   console.log(`Servidor httpsS escuchando en el puerto ${process.env.httpsS_PORT || 443}`.bgMagenta);
