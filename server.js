@@ -38,7 +38,7 @@ app.use(notFound);
 
 const httpsServer = https.createServer(app);
 
-httpsServer.listen(process.env.PORT || 443, () => {
+httpsServer.listen(process.env.PORT || 8080, () => {
   console.log(`Servidor HTTPS escuchando en el puerto ${process.env.PORT || 8080}`.bgMagenta);
 });
 
