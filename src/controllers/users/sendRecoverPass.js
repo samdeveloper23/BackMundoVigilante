@@ -20,10 +20,10 @@ const sendRecoverPass = async (req, res, next) => {
 
         await updateUserRecoverPassQuery(email, recoverPassCode);
 
-        const emailSubject = 'TattooArt: Recuperación de contraseña';
+        const emailSubject = 'MundoVigilante: Recuperación de contraseña';
 
         const emailBody = `
-            Se ha solicitado la recuperación de contraseña para este email en TattooArt. 
+            Se ha solicitado la recuperación de contraseña para este email en MundoVigilante. 
             
             Introduce el siguiente código en nuestra plataforma para crear una nueva contraseña: ${recoverPassCode}
 

@@ -25,7 +25,7 @@ const loginUsers = async (req, res, next) => {
         };
 
         const token = jwt.sign(infoToken, process.env.SECRET, {
-            expiresIn: '1d',
+            expiresIn: '2d',
         });
 
         res.send({

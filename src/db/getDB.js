@@ -11,6 +11,7 @@ const getDB = async () => {
                 host: 'bkdus5j4s9ph1odfu8z9-mysql.services.clever-cloud.com',
                 user: 'uozyltbxpvs87x8h',
                 password: 't3XnJ3wu1qRf7XTytpzH',
+                port: 20175,
                 timezone: 'Z',
             });
 
@@ -18,11 +19,12 @@ const getDB = async () => {
             await db.query(`USE bkdus5j4s9ph1odfu8z9`);
 
             pool = mysql.createPool({
-                connectionLimit: 10,
+                connectionLimit: 15,
                 host: 'bkdus5j4s9ph1odfu8z9-mysql.services.clever-cloud.com',
                 user: 'uozyltbxpvs87x8h',
                 password: 't3XnJ3wu1qRf7XTytpzH',
                 database: 'bkdus5j4s9ph1odfu8z9',
+                port: 20175,
                 timezone: 'Z',
             });
         }
