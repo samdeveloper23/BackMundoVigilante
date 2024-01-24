@@ -4,11 +4,20 @@ const morgan = require('morgan');
 const fileUpload = require('express-fileupload');
 const cors = require('cors');
 const path = require('path');
+const http = require('http');
+const { Server } = require('socket.io');
 const { errorStandard, notFound } = require('./src/services/errors');
 const userRoutes = require('./src/routes/userRoutes');
 const publicationRoutes = require('./src/routes/publicationRoutes');
 
 const app = express();
+const server = http.createServer(app);
+const io = new Server(server, {
+    cors: {
+        origin: 'http://localhost:5173', // URL del frontend.
+        methods: ["GET", "POST"]
+    }
+});
 
 app.use(morgan('dev'));
 app.use(express.json());
@@ -16,11 +25,11 @@ app.use(fileUpload());
 
 // Configuración CORS
 app.use(cors({
-  origin: 'https://mundovigilante.netlify.app',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
-  optionsSuccessStatus: 204,
-  allowedHeaders: 'Content-Type,Authorization',
+    origin: 'http://localhost:5173',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+    optionsSuccessStatus: 204,
+    allowedHeaders: 'Content-Type,Authorization',
 }));
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -35,8 +44,24 @@ app.use(publicationRoutes);
 app.use(errorStandard);
 app.use(notFound);
 
-app.listen(process.env.PORT ?? 8080, () => {
-  console.log(`Servidor HTTPS escuchando en el puerto ${process.env.PORT ?? 8080}`);
+io.on('connection', (socket) => {
+    socket.on('join_room', (data) => {
+        socket.join(data);
+        console.log(`Usuario ${socket.id} se unió a la sala: ${data}`);
+    });
+
+    socket.on('send_message', (data) => {
+        socket.to(data.room).emit("receive_message", data);
+        console.log(data);
+    });
+
+    socket.on('disconnect', (data) => {
+        console.log(`Usuario ${socket.id} desconectado`);
+    });
 });
 
+const PORT = process.env.PORT || 8080;
 
+server.listen(PORT, () => {
+    console.log(`Servidor HTTPS y Socket.IO escuchando en el puerto ${PORT}`);
+});
